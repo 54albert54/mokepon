@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.static('./public'))
 app.use(express.json())
 const PORT = process.env.PORT || 8080;
-const IP =  process.env.IP || '192.168.1.171';
+
 
 let jugadores = []
 let variable = process.env.MENSAJE;
@@ -60,8 +60,7 @@ app.post("/mokepon/:jugadorId",(req,res)=>{
     jugadores[jugadorIndex].asignarMokepon(mokepon)
   }
 
-  // console.log('judadores lista',jugadores);
-  // console.log('jugadorId',jugadorId);
+
   res.end()
   
 })
@@ -120,6 +119,6 @@ app.get('/reiniciar',(req,res)=>{
 
 
 
-app.listen(PORT,IP, () => {
+app.listen(PORT, () => {
   console.log(`Servidor funcionando en el y la direccion IP:${IP} PORT:${PORT}`)
 })

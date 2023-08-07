@@ -164,7 +164,7 @@ function iniciarJuego() {
 }
 
 function unirseAlJuego() {
-    fetch(`/unirse`)
+    fetch(`https://mosteronlite.onrender.com/unirse`)
         .then(function (res) {
             
             if (res.ok) {
@@ -206,7 +206,7 @@ function seleccionarMascotaJugador() {
 function  seleccionarMokepon(mascotaJugador) {
     console.log('ya pandaste el post');
     
-    fetch(`/mokepon/${jugadorId}`,{
+    fetch(`https://mosteronlite.onrender.com/mokepon/${jugadorId}`,{
         method:'post',
         headers:{
             "Content-Type":"application/json"
@@ -269,7 +269,7 @@ function secuenciaAtaque() {
 }
 
 function enviarAtaques(){
-	fetch(`/mokepon/${jugadorId}/ataques`,{   
+	fetch(`https://mosteronlite.onrender.com/mokepon/${jugadorId}/ataques`,{   
     method:'post',   
 		headers:{
 			"Content-type":"application/json"
@@ -283,7 +283,7 @@ function enviarAtaques(){
 }
 
 function obtenerAtaques(){
- fetch(`/mokepon/${enemigoId}/ataques`)
+ fetch(`https://mosteronlite.onrender.com/mokepon/${enemigoId}/ataques`)
  .then((res)=>{
 	if (res.ok){
 		res.json()
@@ -401,7 +401,7 @@ function crearMensajeFinal(resultadoFinal) {
 function reiniciarJuego() {
     
 
-    fetch('/reiniciar')
+    fetch(`https://mosteronlite.onrender.com/reiniciar`)
     .then((res)=>{res.json().then(data=>{
         location.reload()
         console.log(data)})})
@@ -436,7 +436,7 @@ function pintarCanvas() {
    
 }
 function enviarPosicion(x,y){
-    fetch(`/mokepon/${jugadorId}/posicion`,{   
+    fetch(`https://mosteronlite.onrender.com/mokepon/${jugadorId}/posicion`,{   
     method:'post',   
 		headers:{
 			"Content-type":"application/json"
