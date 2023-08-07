@@ -120,5 +120,5 @@ app.get('/reiniciar',(req,res)=>{
 
 
 app.listen(PORT, () => {
-  console.log(`Servidor funcionando en el y la direccion IP:${IP} PORT:${PORT}`)
+  console.log(`Servidor funcionando en el y la direccion `)
 })
